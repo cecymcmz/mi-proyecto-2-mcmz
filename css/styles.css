@@ -199,6 +199,20 @@ article.contactos {
   max-width: 600px;
 }
 
+.icon {
+  margin-top: 10px;
+  width: 60px;
+  max-width: 100px;
+  padding: 5px;
+  z-index: -3;
+  transition: all 0.7s;
+}
+
+.icon:hover {
+  transform: translateX(-20px);
+  transition: all 0.7s;
+}
+
 footer {
   height: 90px;
   display: flex;
@@ -249,14 +263,12 @@ margin-right: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    {
+    
     .imagen-principal img {
       width: 600px;
       height: 600px;
-    float: :left; /*alinea la imagen al centro*/
+    float: left; /*alinea la imagen al centro*/
     margin-right: 10px; /*agregar un margen derecho para seprr el contenido*/
-    }
-      
-    } 
+    }  
   }
 }
