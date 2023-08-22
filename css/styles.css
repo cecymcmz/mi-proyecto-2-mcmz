@@ -126,7 +126,7 @@ figure.imagen-presentacion img {
   border-radius: 100%;
   width: 500px;
   max-width: 90%;
- 
+ float: left;
 }
 
 article.presentacion {
@@ -247,13 +247,20 @@ main {
 *    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
 */
 /* para el @media query modo movil */
-@media(max-width: 768px) {
- .imagen-principal  img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+@media screen and (max-width: 768px) {
+figure.imagen-presentacion {
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+
   }
+  h1 {
+    font-size: 36px;
+    transition-duration: 0;
+    text-align: center;
 }
+}
+
 /* para el @media query en modo Desktop */
 @media (min-width: 1024px) {
   body {
@@ -263,12 +270,6 @@ margin-right: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    
-    .imagen-principal img {
-      width: 600px;
-      height: 600px;
-    float: left; /*alinea la imagen al centro*/
-    margin-right: 10px; /*agregar un margen derecho para seprr el contenido*/
-    }  
   }
 }
+    
