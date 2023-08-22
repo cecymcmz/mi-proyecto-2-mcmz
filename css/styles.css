@@ -20,8 +20,9 @@
 
 body {
   font-family: "EB Garamond", serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.2;
+  text-align: center;
   background-color: rgb(238, 224, 224);
   color: rgb(8, 0, 0);
 }
@@ -87,6 +88,12 @@ img.icon {
   box-shadow: 0 3px 10px -5px #c0bdbd;
   color: black;
 }
+img:hover,
+li.nav-item:hover {
+    background-color: deeppink;
+    color: #BAEED9;
+    transition-duration: 0.7s;
+}
 .navbar-nav.ml-auto {
   margin-left: auto;
 }
@@ -98,16 +105,16 @@ section {
   align-items: center;
   padding: 16px;
   min-height: 100vh;
-  padding-top: 120px;
+  padding-top: 130px;
 }
 
 section#inicio {
+  flex-direction: row;
   justify-content: space-around;
 }
 
 figure.imagen-presentacion {
-  margin-bottom: 0%;
-  text-align: center;
+  margin-bottom: 20px 0;
 }
 
 .logo-personal {
@@ -117,8 +124,9 @@ figure.imagen-presentacion {
 
 figure.imagen-presentacion img {
   border-radius: 100%;
-  width: 30%;
-  max-width: 100%;
+  width: 500px;
+  max-width: 90%;
+ 
 }
 
 article.presentacion {
@@ -224,6 +232,14 @@ main {
 *    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
 *    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
 */
+/* para el @media query modo movil */
+@media(max-width: 768px) {
+ .imagen-principal  img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+  }
+}
 /* para el @media query en modo Desktop */
 @media (min-width: 1024px) {
   body {
@@ -233,5 +249,14 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    {
+    .imagen-principal img {
+      width: 600px;
+      height: 600px;
+    float: :left; /*alinea la imagen al centro*/
+    margin-right: 10px; /*agregar un margen derecho para seprr el contenido*/
+    }
+      
+    } 
   }
 }
